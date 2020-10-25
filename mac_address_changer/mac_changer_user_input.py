@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python
 """
 Program that changes the MAC address of a system using user input.
