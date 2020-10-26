@@ -11,7 +11,7 @@ new_mac = raw_input("New MAC > ")
 
 
 subprocess.call(["ifconfig", interface, "down"])
-subprocess.call(["ifconfig", interface, "hw ether", new_mac])
+subprocess.call(["ifconfig", interface, "hw", "ether", new_mac])
 subprocess.call(["ifconfig", interface, "up"])
 
 print("[+] The MAC address of " + interface + " has been changed to " + new_mac)
