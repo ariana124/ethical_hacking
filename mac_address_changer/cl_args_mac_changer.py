@@ -10,12 +10,13 @@ import optparse
 parser = optparse.OptionParse()
 
 parser.add_option("-i", "--interface", dest="interface", help="Interface to change its MAC address")
+parser.add_option("-m", "--mac", dest="new_mac", help="New MAC Address")
 
 # Parses the arguments on the command line.
-parser.parse_args()
+(options, arguments) = parser.parse_args()
 
-interface = raw_input("Interface > ")
-new_mac = raw_input("New MAC > ")
+interface = options.interface
+new_mac = options.new_mac
 
 
 subprocess.call(["ifconfig", interface, "down"])
