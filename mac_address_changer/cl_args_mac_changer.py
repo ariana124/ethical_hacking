@@ -12,7 +12,7 @@ parser = optparse.OptionParse()
 parser.add_option("-i", "--interface", dest="interface", help="Interface to change its MAC address")
 parser.add_option("-m", "--mac", dest="new_mac", help="New MAC Address")
 
-# Parses the arguments on the command line and stores the arguments into the options variable and the value of it into the argument variable.
+# Parses the arguments on the command line and stores the arguments into the arguments variable and the value of it into the options variable.
 (options, arguments) = parser.parse_args()
 
 interface = options.interface
